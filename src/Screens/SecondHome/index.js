@@ -10,12 +10,14 @@ import {
     TotalPriceFont,
     CandyImage,
     ButtonContainer,
-    TotalContainer
+    TotalContainer,
+    FreeContainer,
+    FreeText
     }from './styles'
 import Line from "../../Components/Line";
 import FinishButton from "../../Components/FinishButton";
 
-export default function Home(){
+export default function SecondHome(){
 
 const [dataCandy, setDataCandy] = useState({})
 const [value, setValue] = useState(0)
@@ -27,6 +29,9 @@ const FlatListFooter = () => {
             <TotalPriceFont>Total</TotalPriceFont>
             <TotalPriceFont>R$ {value / 100}</TotalPriceFont>
         </TotalContainer>
+        <FreeContainer>
+            <FreeText>Parabéns, sua compra tem frete grátis!</FreeText>
+        </FreeContainer>
         <Line/>
         <ButtonContainer>
            <FinishButton title='Finalizar compra'/>
@@ -36,7 +41,7 @@ const FlatListFooter = () => {
 }
 
     useEffect(() => {
-        axios.get('https://apilowprice.000webhostapp.com/api_low.json')
+        axios.get('https://apilowprice.000webhostapp.com/api_high.json')
                 .then(response => {
                     setDataCandy(response.data)
                 }).catch(error => {

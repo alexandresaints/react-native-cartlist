@@ -30,17 +30,33 @@ export const TotalPriceFont = styled.Text`
     max-width: 120px;
     font-family: 'Poppins-Bold';
 `
-export const ButtonContainer = styled.TouchableOpacity`
+export const ButtonContainer = styled.View`
     justify-content: center;
     margin-top: 10px;
     margin: 20px;
     padding: 20px;
 `
+
 export const TotalContainer = styled.View`
     flex-direction: row;
     justify-content: space-between;
     margin: 20px;
 `
+export const FreeContainer = styled.View`
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+`
+export const FreeText = styled.Text`
+    color: #2b9031;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'Poppins-Regular';
+    background-color: #c3f4a1;
+    padding: 15px;
+    border-radius: 25px;
+`
+
 export const CandyImage = styled.Image`
     width: 130px;
     margin-right: 10px;

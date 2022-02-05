@@ -1,38 +1,29 @@
 import React from "react";
-import {View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
-
-import she from '../Assets/Images/she.jpg'
+import {View, Text, StyleSheet } from "react-native";
 
 export default function Navbar(){
         return(
             
-            <View style={{justifyContent: 'space-between', flexDirection: 'row'}}>
+            <View style={styles.headerContainer}>
                 <View style={{flexDirection: 'row'}}>
-                    <Text style={styles.headerTitle}>Bookshelf</Text>
+                    <Text style={styles.headerTitle}>Meu carrinho</Text>
                 </View>
-                <TouchableOpacity>
-                    <Image source={she} style={styles.headerProfilePic} />
-                </TouchableOpacity>
             </View>
     )
 }
 
 const styles = StyleSheet.create({
 
-    headerLogo: {
-        marginHorizontal: 10
+    headerContainer: {
+        justifyContent: 'space-between',
+        flexDirection: 'row'
     },
+
     headerTitle: {
         color: '#000',
-        fontWeight: 'bold',
+        fontFamily: 'Poppins-ExtraBold',
         fontSize: 24
-    },
-    headerProfilePic: {
-        width: 30,
-        height: 30,
-        borderRadius: 50,
-        marginLeft: 225
-    },
+    }
 
 })
     
